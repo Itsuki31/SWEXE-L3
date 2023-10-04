@@ -1,14 +1,15 @@
-<p style="color: green"><%= notice %></p>
+<% if flash[:notice] %>
+    <%= flash[:notice] %>
+<% end %>
 
-<h1>Tweets</h1>
-
-<div id="tweets">
-  <% @tweets.each do |tweet| %>
-    <%= render tweet %>
+<% @tweets.each do |e| %>
     <p>
-      <%= link_to "Show this tweet", tweet %>
+        <%= e.message %>
+        <%= ((Time.current - e.tdate)/60).to_i %>分
+        <%=link_to '削除', "/tweets/#{e.id}", data: { turbo_method: :delete } %>
+        <%=link_to '表示', "/tweets/#{e.id}" %>
+        <%=link_to '編集', "/tweets/#{e.id}/edit" %>
     </p>
-  <% end %>
-</div>
+<% end %>
 
-<%= link_to "New tweet", new_tweet_path %>
+<%= link_to '新規追加', 'tweets/new' %>
