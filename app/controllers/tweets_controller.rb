@@ -38,4 +38,3 @@ class TweetsController < ApplicationController
       end
     end
   end
-  
