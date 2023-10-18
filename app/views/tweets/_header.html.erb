@@ -1,0 +1,34 @@
+<%=link_to "/", class: "aicon" do %>
+    <%= image_tag ("x.png") %>
+<% end %></br>
+
+<div> 
+    <%=link_to "/", class: "button" do %>
+        <%= image_tag ("home.png") %> ホーム
+    <% end %>
+    <%=link_to "/", class: "button" do %>
+        <%= image_tag ("search.png") %> 検索
+    <% end %>
+    <%=link_to "/", class: "button" do %>
+        <%= image_tag ("bell.png") %> 通知
+    <% end %>
+    <%=link_to "/", class: "button" do %>
+        <%= image_tag ("mail.png") %> メッセージ
+    <% end %>
+    <%=link_to "/", class: "button" do %>
+        <%= image_tag ("bookmark.png") %> ブックマーク
+    <% end %>
+    <%=link_to "/", class: "button" do %>
+        <%= image_tag ("list.png") %> リスト
+    <% end %>
+    <%=link_to "/", class: "button" do %>
+        <%= image_tag ("profile.png") %> プロフィール
+    <% end %>
+    <%=link_to "/", class: "button" do %>
+        <%= image_tag ("more.png") %> もっと見る
+    <% end %>
+    
+    <div id=tweet>
+        <%=link_to 'ツイートする', "tweets/new" %>
+    </div>
+</div>
