@@ -1,6 +1,6 @@
 class TweetsController < ApplicationController
     def index
-      @tweets = Tweet.all
+      @tweets = Tweet.order(created_at: :desc)
       logger.debug("********")
       logger.debug(@tweets.first.message)
     end
