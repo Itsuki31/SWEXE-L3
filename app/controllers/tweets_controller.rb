@@ -1,8 +1,8 @@
 class TweetsController < ApplicationController
     def index
       @tweets = Tweet.order(created_at: :desc)
-      logger.debug("********")
-      logger.debug(@tweets.first.message)
+      #logger.debug("********")
+      #logger.debug(@tweets.message)
     end
     def new
       @tweet = Tweet.new
